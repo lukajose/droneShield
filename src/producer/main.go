@@ -12,7 +12,7 @@ import (
 var ctx = context.Background()
 
 func main() {
-	port := ":8083"
+
 	// set up redis
 	rds := redis.NewClient(&redis.Options{
 		Addr:     "redis:6379", // connect to container
@@ -40,7 +40,7 @@ func main() {
 	}
 
 	log.Println("Connected to redis")
-	log.Println("Drone producer on port: ", port)
+	log.Println("Running drone coords producer")
 	drone.Start(rds)
 
 }
