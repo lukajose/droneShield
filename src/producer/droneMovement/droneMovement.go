@@ -19,7 +19,7 @@ const channel = "droneMove" // we could read this from yaml file
 const radius = 10           // could be less or more depending on how wide we want out circle
 const angleInterval = .2    // angle can be less for more precision
 
-/* Creates the angle sequence for the circle trajectory and zig zag*/
+/* Creates the angle sequence for the circle trajectory*/
 func angleSeq() func() float64 {
 	angle := 0.0
 	return func() float64 {
