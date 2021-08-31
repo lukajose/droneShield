@@ -1,0 +1,40 @@
+{
+  "name": "software-tech-test",
+  "version": "1.0.0",
+  "description": "Software Engineering Tech Test",
+  "main": "index.js",
+  "scripts": {
+    "build-ts": "tsc",
+    "build": "npm run build-ts",
+    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
+    "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
+    "serve": "node dist/server.js",
+    "start": "npm run build-ts && npm run serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/droneshield-public/software-tech-test.git"
+  },
+  "author": "James Kwok",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/droneshield-public/software-tech-test/issues"
+  },
+  "homepage": "https://gitlab.com/droneshield-public/software-tech-test#readme",
+  "dependencies": {
+    "@types/redis": "^2.8.31",
+    "redis": "^3.1.2",
+    "websocket": "^1.0.34",
+    "ws": "^8.2.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.19.0",
+    "@typescript-eslint/parser": "^4.19.0",
+    "build-test": "^2.0.15",
+    "eslint": "^7.22.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "prettier": "^2.2.1"
+  }
+}
