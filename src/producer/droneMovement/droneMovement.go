@@ -51,11 +51,11 @@ func (d *DroneCoords) MoveCircle(rds *redis.Client, angle float64) error {
 }
 
 // update coordinates of drone to continuosly do zig zags
-func (d *DroneCoords) MoveZigZag(rds *redis.Client, angle float64) error {
+func (d *DroneCoords) MoveZigZag(rds *redis.Client) error {
 
 	droneMove := DroneCoords{
-		Latitude:  d.Latitude,                    //move right
-		Longitude: d.Longitude + math.Sin(angle), // do a sin function
+		Latitude:  d.Latitude,           //move right
+		Longitude: math.Sin(d.Latitude), // do a sin function
 	}
 	d.Latitude += 0.00009173 // from example move right given
 	// jsonify
